@@ -1,1 +1,45 @@
-Hello World
+<!DOCTYPE html>
+<html ng-app="StydentApp">
+ head>
+    <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Spysok</h1>
+    <h2>Commit</h2>
+    <div id="table1" ng-controller="table">
+    <table  cellpadding="0" border="0" cellspacing="0"  >
+        <tr id="heading">
+        <th>Name</th>
+        <th>quarter1</th>
+        <th>quarter2</th>
+        <th>quarter3</th>
+        <th>quarter4</th>
+      </tr>
+      <tr ng-repeat="item in items">
+        <td>{{item.name}}</td>
+        <td>{{item.quarter1}}</td>
+        <td>{{item.quarter2}}</td>
+        <td>{{item.quarter3}}</td>
+        <td>{{item.quarter4}}</td>
+      </tr>
+  </table>
+        <div >
+        <label>Name:</label>
+        <input type="text" ng-model="new_name"> <br>
+        <label>quarter1</label>
+        <input type="number" ng-model="new_quarter1"><br>
+        <label>quarter2</label>
+        <input type="number" ng-model="new_quarter2"><br>
+        <label>quarter3</label>
+        <input type="number" ng-model="new_quarter3"><br>
+        <label>quarter4</label>
+        <input type="number" ng-model="new_quarter4"><br>
+        <button ng-click="save()">Save</button>
+    </div>
+
+    </div>
+
+</html>
